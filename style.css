@@ -36,9 +36,7 @@ li{
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: -100px;
+  
 
 }
 #add-todo-form{
