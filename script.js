@@ -8,7 +8,7 @@ addBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
   if (!input.value.trim()) {
-    alert("Please enter a Task");
+    customAlert("Enter task");
     return;
   }
 
@@ -97,3 +97,28 @@ const updateTodo = (index) => {
 };
 
 renderTodos();
+
+function customAlert(message) {
+  const dialogBox = document.querySelector(".dialog-box");
+  const dialogMessage = document.querySelector(".dialog-message");
+  const okBtn = document.querySelectorAll(".dialog-btn");
+  const overlay = document.createElement("div");
+  overlay.style.position = "fixed";
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.width = "100%";
+  overlay.style.height = "100%";
+  overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  overlay.style.zIndex = 999;
+
+  dialogMessage.textContent = message;
+  dialogBox.style.display = "block";
+  document.body.appendChild(overlay);
+  console.log(okBtn);
+  okBtn.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      dialogBox.style.display = "none";
+      overlay.remove();
+    });
+  });
+}
