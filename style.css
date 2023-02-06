@@ -1,0 +1,47 @@
+#todo-list{
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+#todo-input{
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+button{
+    padding: 10px 20px;
+    background-color: rgb(135, 216, 243);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+}
+.completed{
+    background-color: lightgreen;
+    text-decoration: line-through;
+}
+#delete-all-btn{
+      padding: 10px 20px;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: -100px;
+
+}
+#add-todo-form{
+    position: relative;
+  
+}
