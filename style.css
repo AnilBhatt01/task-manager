@@ -45,3 +45,21 @@ li{
     position: relative;
   
 }
+@media screen and (max-width: 500px) {
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-direction: wrap;
+    }
+    #todo-input{
+        width: 60%;
+        background-color: blue;
+    }
+
+    #todo-list{
+        width: 80%;
+    }
+
+}
