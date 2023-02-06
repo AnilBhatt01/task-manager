@@ -49,7 +49,7 @@ const renderTodos = () => {
       ${todo.name}
       <div>
         <button class="delete-btn">Delete</button>
-        <button class="complete-btn">Complete</button>
+        <button class="complete-btn">Completed</button>
         <button class="update-btn">Update</button>
       </div>`;
 
@@ -85,7 +85,7 @@ const toggleComplete = (index) => {
 };
 
 const updateTodo = (index) => {
-  const todos = JSON.parse(localStorage.getItem("todos")) || [];
+  let todos = JSON.parse(localStorage.getItem("todos")) || [];
   if (!todos[index]) return;
 
   const newTodo = prompt("Enter the updated task", todos[index].name);
