@@ -32,6 +32,7 @@ li{
     background-color: lightgrey;
     display: flex;
     justify-content: space-between;
+    
 }
 .completed{
     background-color: lightgreen;
@@ -50,6 +51,10 @@ li{
 #add-todo-form{
     position: relative;
   
+}
+
+#todos{
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 500px) {
@@ -73,7 +78,61 @@ li{
     button{
     padding: 10px 15px;
     margin-bottom: 5px;
+
     
 }
 
 }
+
+
+
+.dialog-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px lightgray;
+    text-align: center;
+    z-index: 9999;
+   width: 60%;
+
+}
+
+.dialog-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.dialog-message {
+    margin-bottom: 20px;
+}
+
+.dialog-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.dialog-btn {
+    padding: 10px 20px;
+    background-color: #87d8f3;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.dialog-btn:hover {
+    background-color: #60c5e9;
+}
+
+
+
+
+
