@@ -29,7 +29,9 @@ addBtn.addEventListener("click", (event) => {
 
 deleteBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  localStorage.removeItem("todos");
+  const todos = JSON.parse(localStorage.getItem("todos")) || [];
+  const filteredTodos = todos.filter((todo) => !todo.completed);
+  localStorage.setItem("todos", JSON.stringify(filteredTodos));
   renderTodos();
 });
 
