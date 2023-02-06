@@ -1,3 +1,11 @@
+*,html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+}
+
 #todo-list{
     width: 600px;
     margin: 50px auto;
@@ -43,6 +51,7 @@ li{
     position: relative;
   
 }
+
 @media screen and (max-width: 500px) {
     form{
         display: flex;
@@ -51,13 +60,19 @@ li{
         flex-direction: column;
         flex-direction: wrap;
     }
-    #todo-input{
-        width: 60%;
-      
-    }
+   
 
     #todo-list{
-        width: 80%;
+        width: 100%;
+        margin-top: 10px;
     }
+    div{
+        margin-bottom: 10px;
+    }
+
+    button{
+    padding: 10px 15px;
+    
+}
 
 }
