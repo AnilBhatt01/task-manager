@@ -29,7 +29,9 @@ addBtn.addEventListener("click", (event) => {
 
 deleteBtn.addEventListener("click", (event) => {
   event.preventDefault();
+
   const todos = JSON.parse(localStorage.getItem("todos")) || [];
+
   const filteredTodos = todos.filter((todo) => !todo.completed);
   localStorage.setItem("todos", JSON.stringify(filteredTodos));
   renderTodos();
@@ -101,7 +103,7 @@ renderTodos();
 function customAlert(message) {
   const dialogBox = document.querySelector(".dialog-box");
   const dialogMessage = document.querySelector(".dialog-message");
-  const okBtn = document.querySelectorAll(".dialog-btn");
+  const okBtn = document.querySelector(".dialog-btn");
   const overlay = document.createElement("div");
   overlay.style.position = "fixed";
   overlay.style.top = 0;
@@ -114,11 +116,9 @@ function customAlert(message) {
   dialogMessage.textContent = message;
   dialogBox.style.display = "block";
   document.body.appendChild(overlay);
-  console.log(okBtn);
-  okBtn.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      dialogBox.style.display = "none";
-      overlay.remove();
-    });
+
+  okBtn.addEventListener("click", function () {
+    dialogBox.style.display = "none";
+    overlay.remove();
   });
 }
