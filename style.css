@@ -57,35 +57,6 @@ li{
     margin-top: 20px;
 }
 
-@media screen and (max-width: 500px) {
-    form{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        flex-direction: wrap;
-    }
-   
-
-    #todo-list{
-        width: 100%;
-        margin-top: 10px;
-    }
-    div{
-        margin-bottom: 10px;
-    }
-
-    button{
-    padding: 10px 15px;
-    margin-bottom: 5px;
-
-    
-}
-
-}
-
-
-
 .dialog-box {
     display: none;
     position: fixed;
@@ -111,10 +82,6 @@ li{
     margin-bottom: 20px;
 }
 
-.dialog-footer {
-    display: flex;
-    justify-content: center;
-}
 
 .dialog-btn {
     padding: 10px 20px;
@@ -130,6 +97,33 @@ li{
 
 .dialog-btn:hover {
     background-color: #60c5e9;
+}
+
+@media screen and (max-width: 500px) {
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-direction: wrap;
+    }
+   
+
+    #todo-list{
+        width: 100%;
+        margin-top: 10px;
+    }
+    div{
+        margin-bottom: 10px;
+    }
+
+    button{
+    padding: 10px 15px;
+    margin-bottom: 5px;
+
+    
+}
+
 }
 
 
